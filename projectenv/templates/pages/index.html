@@ -1,1 +1,26 @@
-<h1>Selam Egito</h1>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<h1>Ferro Boya</h1>
+
+<div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">BOYA</th>
+      <th scope="col">RENK</th>
+      <th scope="col">STOK</th>
+    </tr>
+  </thead>
+  {% for paint in paints %}
+  <tbody>
+    <tr>
+      <td>{{ paint }}</td>
+      <td>{{ paint.color }}</td>
+      <td>{{ paint.stock }}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+
+</div>
