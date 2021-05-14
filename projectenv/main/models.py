@@ -17,4 +17,4 @@ class Paint(models.Model):
     stock = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.color
+        return self.name, self.color
