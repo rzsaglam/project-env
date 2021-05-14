@@ -18,27 +18,3 @@
     </li>
   </ul>
 </nav>
-
-<div>
-<table class="table table-light table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">BOYA</th>
-      <th scope="col">TÜR</th>
-      <th scope="col">RENK</th>
-      <th scope="col">STOK</th>
-    </tr>
-  </thead>
-  {% for paint in paints %}
-  <tbody>
-    <tr>
-      <td>{{ paint.name }}</td>
-      <td>{{ paint.type }}</td>
-      <td>{{ paint.color }}</td>
-      <td>{{ paint.stock }}</td>
-    </tr>
-  </tbody>
-  {% endfor %}
-</table>
-
-</div>
