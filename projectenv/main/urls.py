@@ -5,4 +5,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('ferropox', views.ferropox, name='ferropox'),
+    path('alkid', views.alkid, name='alkid'),
+    path('promega', views.promega, name='promega'),
 ]
