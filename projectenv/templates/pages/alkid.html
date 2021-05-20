@@ -28,7 +28,7 @@
       <td>{{ paint.name }}</td>
       <td>{{ paint.type }}</td>
       <td>{{ paint.color }}</td>
-      <td class="" id="stock">{{ paint.stock }}</td>
+      <td id="stock">{{ paint.stock }}</td>
     </tr>
   </tbody>
   {% endfor %}
@@ -36,9 +36,11 @@
 </div>
 
 <script>
-  myvar = document.getElementById("stock").innerHTML
+  myvar = (
+    '{% for paint in paints %} {{paint.stock}} {% endfor %}'
+  );
   console.log(myvar)
-  if (myvar == 0) {
-    document.getElementById("stock").className=("bg-danger")
+  if (myvar == 1) {
+    document.getElementById('stock').className=('stock bg-danger')
   }
 </script>
