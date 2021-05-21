@@ -27,7 +27,7 @@
       <td>{{ paint.name }}</td>
       <td>{{ paint.type }}</td>
       <td>{{ paint.color }}</td>
-      <td><input type="text" class="{% if paint.stock == 0 %}input-group-text bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text danger{% endif %}" value="{{ paint.stock }}"></td>
+      <td><input type="text" class="{% if paint.stock == 0 %}input-group-text text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text{% endif %}" value="{{ paint.stock }}"></td>
     </tr>
   </tbody>
   {% endfor %}
