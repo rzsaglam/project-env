@@ -1,39 +1,41 @@
 <head>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <div class="container-flex">
-    <a class="navbar-brand" href="{% url 'index' %}">FERRO BOYA - TUZLA</a>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-flex">
+      <a class="navbar-brand" href="{% url 'index' %}">FERRO BOYA - TUZLA</a>
+    </div>
+    <div class="navbar-nav">
+        <a class="nav-item nav-link active" aria-current="page" href="{% url 'ferropox' %}">Ferropox</a>
+        <a class="nav-item nav-link" aria-current="page" href="{% url 'alkid' %}">Alkid</a>
+        <a class="nav-item nav-link" aria-current="page" href="{% url 'promega' %}">Promega</a>
+    </div>
+  </nav>
+  <div>
+  <table class="table table-light table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">BOYA</th>
+        <th scope="col">TÜR</th>
+        <th scope="col">RENK</th>
+        <th scope="col">STOK</th>
+      </tr>
+    </thead>
+    {% for paint in paints %}
+    <tbody>
+      <tr>
+        <td>{{ paint.name }}</td>
+        <td>{{ paint.type }}</td>
+        <td>{{ paint.color }}</td>
+        <td><input type="text" class="{% if paint.stock == 0 %}input-group-text text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text{% endif %}" value="{{ paint.stock }}" disabled></td>
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+  
   </div>
-  <div class="navbar-nav">
-      <a class="nav-item nav-link active" aria-current="page" href="{% url 'ferropox' %}">Ferropox</a>
-      <a class="nav-item nav-link" aria-current="page" href="{% url 'alkid' %}">Alkid</a>
-      <a class="nav-item nav-link" aria-current="page" href="{% url 'promega' %}">Promega</a>
-  </div>
-</nav>
-<div>
-<table class="table table-light table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">BOYA</th>
-      <th scope="col">TÜR</th>
-      <th scope="col">RENK</th>
-      <th scope="col">STOK</th>
-    </tr>
-  </thead>
-  {% for paint in paints %}
-  <tbody>
-    <tr>
-      <td>{{ paint.name }}</td>
-      <td>{{ paint.type }}</td>
-      <td>{{ paint.color }}</td>
-      <td><input type="text" class="{% if paint.stock == 0 %}input-group-text text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text{% endif %}" value="{{ paint.stock }}" disabled></td>
-    </tr>
-  </tbody>
-  {% endfor %}
-</table>
-
-</div>
+</body>
 
 <script>
 
