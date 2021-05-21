@@ -1,3 +1,4 @@
+from django.db import models
 from django.shortcuts import render
 from django.http import request
 from .models import PaintList, Paint
@@ -7,16 +8,14 @@ from .models import PaintList, Paint
 
 def index(request):
     paints = Paint.objects.all()
-
     context = {
-        'paints': paints
+        'paints': paints,
     }
-    return render(request, 'pages/index.html', context)
+    return render(request, 'pages/index.html', context,)
 
 
 def ferropox(request):
     paints = Paint.objects.filter(name="Ferropox")
-
     context = {
         'paints': paints
     }
@@ -25,16 +24,14 @@ def ferropox(request):
 
 def alkid(request):
     paints = Paint.objects.filter(name="Alkid")
-
     context = {
-        'paints': paints
+        'paints': paints,
     }
     return render(request, 'pages/alkid.html', context)
 
 
 def promega(request):
     paints = Paint.objects.filter(name="Promega")
-
     context = {
         'paints': paints
     }

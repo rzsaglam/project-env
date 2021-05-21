@@ -28,7 +28,7 @@
       <td>{{ paint.name }}</td>
       <td>{{ paint.type }}</td>
       <td>{{ paint.color }}</td>
-      <td class="" id="stock">{{ paint.stock }}</td>
+      <td><input type="text" class="{% if paint.stock == 0 %}input-group-text bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text danger{% endif %}" value="{{ paint.stock }}"></td>
     </tr>
   </tbody>
   {% endfor %}
@@ -37,11 +37,5 @@
 </div>
 
 <script>
-  myvar = (
-    '{% for paint in paints %} {{paint.stock}} {% endfor %}'
-  );
-  console.log(myvar)
-  if (myvar == 1) {
-    document.getElementById('stock').className=('stock bg-danger')
-  }
+
 </script>
