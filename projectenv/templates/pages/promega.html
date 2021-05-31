@@ -17,6 +17,7 @@
   <table class="table table-light table-bordered">
     <thead>
       <tr>
+        <th scope="col">ID</th>
         <th scope="col">BOYA</th>
         <th scope="col">TÜR</th>
         <th scope="col">RENK</th>
@@ -26,15 +27,22 @@
     {% for paint in paints %}
     <tbody>
       <tr>
+        <td>{{ paint.id }}</td>
         <td>{{ paint.name }}</td>
         <td>{{ paint.type }}</td>
         <td>{{ paint.color }}</td>
-        <td><input type="text" class="{% if paint.stock == 0 %}input-group-text text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text{% endif %}" value="{{ paint.stock }}" readonly></td>
+        <td>
+        <input name="currentStock" type="number" class="{% if paint.stock == 0 %}input-group-text text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text{% endif %}" value="{{ paint.stock }}" readonly>
+        </td>
+        <td>
+          <a href="/edit/{{paint.id}}">
+            <input type="submit" class="btn btn-success" value="Güncelle">
+          </a>
+        </td>
       </tr>
     </tbody>
     {% endfor %}
   </table>
-  
   </div>
 </body>
 

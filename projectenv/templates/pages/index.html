@@ -1,39 +1,52 @@
-<head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-</head>
-<body class="bg-light">
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <div class="container-flex">
-    <a class="navbar-brand" href="{% url 'index' %}">FERRO BOYA - TUZLA</a>
-  </div>
-  <div class="navbar-nav">
-      <a class="nav-item nav-link" aria-current="page" href="{% url 'ferropox' %}">Ferropox</a>
-      <a class="nav-item nav-link" aria-current="page" href="{% url 'alkid' %}">Alkid</a>
-      <a class="nav-item nav-link" aria-current="page" href="{% url 'promega' %}">Promega</a>
-  </div>
-</nav>
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#" data-slide-to="0" class="active"></li>
-    <li data-target="#" data-slide-to="1"></li>
-    <li data-target="#" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" style="height: 600px;" src="https://www.omegaboya.com/wp-content/uploads/2018/05/Omega-Boya-Son-Katlar.jpg" alt="First slide">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Hello, world!</title>
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container-flex">
+        <a class="navbar-brand" href="{% url 'index' %}">FERRO BOYA - TUZLA</a>
+      </div>
+      <div class="navbar-nav">
+          <a class="nav-item nav-link" aria-current="page" href="{% url 'ferropox' %}">Ferropox</a>
+          <a class="nav-item nav-link" aria-current="page" href="{% url 'alkid' %}">Alkid</a>
+          <a class="nav-item nav-link" aria-current="page" href="{% url 'promega' %}">Promega</a>
+      </div>
+    </nav>
+    <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://www.omegaboya.com/wp-content/uploads/2018/05/Omega-Boya-Son-Katlar.jpg" class="d-block w-100" alt="..." height="600">
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.omegaboya.com/wp-content/uploads/2018/06/omega-boya-1900x700.jpg" class="d-block w-100" alt="..." height="600">
+        </div>
+        <div class="carousel-item">
+          <img src="https://www.omegaboya.com/wp-content/uploads/2018/05/renkli-1900x700.jpg" class="d-block w-100" alt="..." height="600">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" style="height: 600px;" src="https://www.omegaboya.com/wp-content/uploads/2018/05/MG_1362.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" style="height: 600px;" src="https://www.omegaboya.com/wp-content/uploads/2018/05/renkli-1900x700.jpg" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-  </a>
-  <a class="carousel-control-next" href="#" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-  </a>
-</div>
-</body>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+  </body>
+</html>

@@ -1,8 +1,11 @@
+import re
+from django import forms
 from django.db import models
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import request
-from .models import PaintList, Paint
-
+from .models import Paint
+from .forms import StockForm
+from django.contrib import messages
 # Create your views here.
 
 
@@ -17,7 +20,7 @@ def index(request):
 def ferropox(request):
     paints = Paint.objects.filter(name="Ferropox")
     context = {
-        'paints': paints
+        'paints': paints,
     }
     return render(request, 'pages/ferropox.html', context)
 
@@ -36,3 +39,17 @@ def promega(request):
         'paints': paints
     }
     return render(request, 'pages/promega.html', context)
+
+
+def editPaint(request, id):
+    paint = Paint.objects.get(id=id)
+    return render(request, "pages/edit.html", {"paint": paint})
+
+
+def updatePaint(request, id):
+    paint = Paint.objects.get(id=id)
+    form = StockForm(request.POST, instance=paint)
+    if form.is_valid():
+        form.save()
+        messages.success(request, "Başarıyla Güncellendi.")
+        return render(request, "pages/edit.html", {"paint": paint})

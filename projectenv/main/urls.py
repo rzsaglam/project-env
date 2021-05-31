@@ -8,4 +8,6 @@ urlpatterns = [
     path('ferropox', views.ferropox, name='ferropox'),
     path('alkid', views.alkid, name='alkid'),
     path('promega', views.promega, name='promega'),
+    path('edit/<int:id>', views.editPaint),
+    path('update/<int:id>', views.updatePaint)
 ]

@@ -1,0 +1,54 @@
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-flex">
+      <a class="navbar-brand" href="{% url 'index' %}">FERRO BOYA - TUZLA</a>
+    </div>
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" aria-current="page" href="{% url 'ferropox' %}">Ferropox</a>
+        <a class="nav-item nav-link active" aria-current="page" href="{% url 'alkid' %}">Alkid</a>
+        <a class="nav-item nav-link" aria-current="page" href="{% url 'promega' %}">Promega</a>
+    </div>
+  </nav>
+
+  <center>
+    <form action="/update/{{paint.id}}" method="POST">
+      {% csrf_token %}
+    <table class="table">
+      <tr>
+        <td>BOYA ID</td>
+        <td><input type="text" class="input-group-text" name="id" value="{{paint.id}}" readonly></td>
+      </tr>
+      <tr>
+        <td>BOYA AD</td>
+        <td><input type="text" class="input-group-text" name="name" value="{{paint.name}}"></td>
+      </tr>
+      <tr>
+        <td>BOYA TÜR</td>
+        <td><input type="text" class="input-group-text" name="type" value="{{paint.type}}"></td>
+      </tr>
+      <tr>
+        <td>BOYA RENK</td>
+        <td><input type="text" class="input-group-text" name="color" value="{{paint.color}}"></td>
+      </tr>
+      <tr>
+        <td>BOYA STOK</td>
+        <td><input type="text" class="input-group-text" name="stock" value="{{paint.stock}}"></td>
+      </tr>
+    </table>
+    <input type="submit" class="btn btn-success" value="Güncelle">
+    <a class="btn btn-secondary" href="#" onclick="history.go(-1)">Çıkış</a>
+    {% if messages %}
+    {% for updatePaint in messages %}
+    {{updatePaint}}
+    {% endfor %}
+    {% endif %}
+  </form>
+  </center>
+
+
+
+
+</body>
