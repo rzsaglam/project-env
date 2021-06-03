@@ -1,0 +1,36 @@
+{% extends 'layouts/layout.html'%}
+{% block content %}
+
+<div class="container py-5">
+	<h1>Register</h1>
+	<form method="POST">
+		{% csrf_token %}<table class="table">
+      <tr>
+        <td>AD : </td>
+        <td>{{ form.username }}</td>
+      </tr>
+      <tr>
+        <td>Şifre :</td>
+        <td>{{ form.password1 }}</td>
+      </tr>
+      <tr>
+        <td>Şifre Tekrar : </td>
+        <td>{{ form.password2 }}</td>
+      </tr>
+      <tr>
+        <td>
+        <button class="btn btn-primary" type="submit">Register</button>
+        </td>
+      </tr>
+    </table>
+    {% if messages %}
+    {% for register in messages %}
+    {{register}}
+    {% endfor %}
+    {% endif %}
+		
+	</form>
+	<p class="text-center">If you already have an account, <a href="/login">login</a> instead.</p>
+</div>
+
+{% endblock %}

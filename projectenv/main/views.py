@@ -1,11 +1,13 @@
-import re
 from django import forms
+from django.contrib.auth.views import redirect_to_login
 from django.db import models
 from django.shortcuts import redirect, render
 from django.http import request
+from django.urls import reverse
 from .models import Paint
-from .forms import StockForm
+from .forms import StockForm, NewUserForm, LoginForm
 from django.contrib import messages
+from django.contrib.auth import login, authenticate, logout
 # Create your views here.
 
 
@@ -42,8 +44,9 @@ def promega(request):
 
 
 def editPaint(request, id):
-    paint = Paint.objects.get(id=id)
-    return render(request, "pages/edit.html", {"paint": paint})
+    if request.user.is_authenticated:
+        paint = Paint.objects.get(id=id)
+        return render(request, "pages/edit.html", {"paint": paint})
 
 
 def updatePaint(request, id):
@@ -53,3 +56,39 @@ def updatePaint(request, id):
         form.save()
         messages.success(request, "Başarıyla Güncellendi.")
         return render(request, "pages/edit.html", {"paint": paint})
+
+
+def loginView(request):
+    form = LoginForm()
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+        login(request, user)
+        messages.success(request, "Başarılı")
+        return redirect_to_login("accounts/profile.html")
+    else:
+        messages.warning(request, "Başarısız")
+
+    return render(request, "accounts/login.html", {'form': form})
+
+
+def logoutView(request):
+    if logout(request):
+        return render(request, "accounts/logout.html")
+
+
+def profile(request):
+    return render(request, 'accounts/profile.html')
+# def register(request):
+#     if request.method == "POST":
+#         form = NewUserForm(request.POST)
+#         if form.is_valid():
+#             user = form.save()
+#             login(request, user)
+#             messages.success(request, "Registration successful.")
+#             return redirect('alkid')
+#         messages.error(
+#             request, "Unsuccessful registration. Invalid information.")
+#     form = NewUserForm
+#     return render(request, "pages/register.html", {"form": form})
