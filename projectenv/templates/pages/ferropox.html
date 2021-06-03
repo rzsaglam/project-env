@@ -17,7 +17,7 @@
         <td>{{ paint.type }}</td>
         <td>{{ paint.color }}</td>
         <td>
-        <input name="currentStock" type="number" class="{% if paint.stock == 0 %}input-group-text text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text{% endif %}" value="{{ paint.stock }}" readonly>
+        <input name="currentStock" type="number" class="{% if paint.stock == 0 %}input-group-text text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text{% endif %}" value="{{ paint.stock }}" style="max-width: 50px;" readonly>
         </td>
         {% if user.is_authenticated %}
         <td>
