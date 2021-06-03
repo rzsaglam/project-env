@@ -10,6 +10,17 @@
 <body class="bg-light">
   <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="width:100%">
     <a class="navbar-brand" href="{% url 'index' %}">FERRO BOYA</a>
+    {% if user.is_authenticated %}
+    <ul class="nav navbar-nav me-2">
+      <a class="nav-item nav-link" href="{% url 'logoutView' %}">Çıkış</a>
+    </ul>
+    {% else %}
+    <ul class="nav navbar-nav me-2">
+      <a class="nav-item nav-link" href="{% url 'loginView' %}">Yetkili Girişi</a>
+    </ul>
+    {% endif %}
+  </nav>
+  <nav class="navbar navbar-expand-sm navbar-light">
     <ul class="nav navbar-nav me-auto mb-2 mb-lg-0">
       <li>
         <a class="nav-item nav-link" aria-current="page" href="{% url 'ferropox' %}">Ferropox</a>
@@ -21,15 +32,6 @@
         <a class="nav-item nav-link" aria-current="page" href="{% url 'promega' %}">Promega</a>
       </li>
     </ul>
-    {% if user.is_authenticated %}
-    <ul class="nav navbar-nav me-2">
-      <a class="nav-item nav-link" href="{% url 'logoutView' %}">Çıkış</a>
-    </ul>
-    {% else %}
-    <ul class="nav navbar-nav me-2">
-      <a class="nav-item nav-link" href="{% url 'loginView' %}">Yetkili Girişi</a>
-    </ul>
-    {% endif %}
   </nav>
   {% block content %}
   {% endblock %}
