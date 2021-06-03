@@ -12,8 +12,17 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="{% url 'index' %}">FERRO BOYA - TUZLA</a>   
     </div>
-    <nav class="navbar navbar-dark bg-dark">
-      <div class="container-fluid nav navbar-nav me-auto mb-2 mb-lg-0">
+    {% if user.is_authenticated %}
+    <ul class="nav navbar-nav">
+      <a class="nav-item nav-link" href="{% url 'logoutView' %}">Çıkış</a>
+    </ul>
+    {% else %}
+    <ul class="nav navbar-nav">
+      <a class="nav-item nav-link" href="{% url 'loginView' %}">Yetkili Girişi</a>
+    </ul>
+    {% endif %}
+    <nav class="navbar navbar-dark bg-dark" style="position:absolute;margin-left:95%;">
+      <div class="container-fluid">
         <button class="btn navbar-toggler-right bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navdropdown" aria-controls="navdropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon bg-dark"></span>
         </button>
@@ -32,15 +41,7 @@
         </li>
       </ul>
     </div>
-    {% if user.is_authenticated %}
-    <ul class="nav navbar-nav me-2">
-      <a class="nav-item nav-link" href="{% url 'logoutView' %}">Çıkış</a>
-    </ul>
-    {% else %}
-    <ul class="nav navbar-nav me-2">
-      <a class="nav-item nav-link" href="{% url 'loginView' %}">Yetkili Girişi</a>
-    </ul>
-    {% endif %}
+    
   </nav>
   {% block content %}
   {% endblock %}
