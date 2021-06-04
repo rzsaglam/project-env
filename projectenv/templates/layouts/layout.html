@@ -28,11 +28,11 @@
     </div>
     {% if user.is_authenticated %}
     <ul class="nav navbar-nav">
-      <a class="nav-item nav-link" href="{% url 'logoutView' %}">Çıkış</a>
+      <a class="nav-item nav-link position-absolute top-0 end-0" href="{% url 'logoutView' %}">Çıkış</a>
     </ul>
     {% else %}
     <ul class="nav navbar-nav">
-      <a class="nav-item nav-link" href="{% url 'loginView' %}">Yetkili Girişi</a>
+      <a class="nav-item nav-link position-absolute top-0 end-0" href="{% url 'loginView' %}">Yetkili Girişi</a>
     </ul>
     {% endif %}
   </nav>
