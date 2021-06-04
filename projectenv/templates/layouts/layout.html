@@ -36,9 +36,8 @@
     </ul>
     {% endif %}
   </nav>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light py-1">
-    <div class="container">
-      <div class="navbar-collapse">
+  <nav class="navbar navbar-default navbar-light bg-light py-1">
+    <div class="container-fluid">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="{% url 'ferropox' %}">Ferropox</a>
@@ -50,7 +49,6 @@
             <a class="nav-item nav-item nav-link" href="{% url 'promega' %}">Promega</a>
           </li>
         </ul>
-      </div>
     </div>
   </nav>
   {% block content %}
