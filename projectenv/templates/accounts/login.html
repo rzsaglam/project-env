@@ -2,19 +2,15 @@
 {% block content %}
 
 <div class="position-absolute top-50 start-50 translate-middle">
-	<form method="POST" class="d-flex justify-content-center">
+	<form method="POST">
 		{% csrf_token %}
       <h1>Yetkili Girişi</h1>
-      <div class="form-outline mb-4">
         <label for="username" class="col-form-label">
           Kullanıcı : {{ form.username }} 
         </label>
-      </div>
-      <div class="form-outline mb-4">
         <label for="password" class="col-form-label">
           Şifre : {{ form.password }}
         </label>
-      </div>
       <button class="btn btn-success" type="submit">Giriş</button>
 
 	</form>
