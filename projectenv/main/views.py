@@ -20,7 +20,7 @@ def index(request):
 
 
 def ferropox(request):
-    paints = Paint.objects.filter(name="Ferropox")
+    paints = Paint.objects.filter(name="Ferropox", location="İstanbul")
     context = {
         'paints': paints,
     }
@@ -28,7 +28,7 @@ def ferropox(request):
 
 
 def alkid(request):
-    paints = Paint.objects.filter(name="Alkid")
+    paints = Paint.objects.filter(name="Alkid", location="İstanbul")
     context = {
         'paints': paints,
     }
@@ -36,11 +36,35 @@ def alkid(request):
 
 
 def promega(request):
-    paints = Paint.objects.filter(name="Promega")
+    paints = Paint.objects.filter(name="Promega", location="İstanbul")
     context = {
         'paints': paints
     }
     return render(request, 'pages/promega.html', context)
+
+
+def promega_yalova(request):
+    paints = Paint.objects.filter(name="Promega", location="Yalova")
+    context = {
+        'paints': paints,
+    }
+    return render(request, 'pages/promega-yalova.html', context)
+
+
+def alkid_yalova(request):
+    paints = Paint.objects.filter(name="Alkid", location="Yalova")
+    context = {
+        'paints': paints,
+    }
+    return render(request, 'pages/alkid-yalova.html', context)
+
+
+def ferropox_yalova(request):
+    paints = Paint.objects.filter(name="Ferropox", location="Yalova")
+    context = {
+        'paints': paints,
+    }
+    return render(request, 'pages/ferropox-yalova.html', context)
 
 
 def editPaint(request, id):

@@ -8,6 +8,7 @@ class Paint(models.Model):
     type = models.CharField(max_length=200, default="none")
     color = models.CharField(max_length=200)
     stock = models.IntegerField(default=0)
+    location = models.CharField(max_length=200, default="İstanbul")
 
     def __str__(self):
         return self.name+' '+self.type+' '+self.color
