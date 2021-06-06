@@ -12,7 +12,7 @@ urlpatterns = [
     path('ferropox', views.ferropox, name='ferropox'),
     path('alkid', views.alkid, name='alkid'),
     path('promega', views.promega, name='promega'),
-    path('ferropox-yalova', views.ferropox_yalova, name='ferropox_yalova'),
+    path('buyuk-boyalar-yalova', views.big_paints, name='buyuk-boyalar-yalova'),
     path('promega-yalova', views.promega_yalova, name='promega_yalova'),
     path('alkid-yalova', views.alkid_yalova, name='alkid_yalova'),
     path('edit/<int:id>', views.editPaint),

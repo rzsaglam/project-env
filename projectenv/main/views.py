@@ -55,16 +55,12 @@ def promega(request):
     return render(request, 'pages/promega.html', context)
 
 
-def ferropox_yalova(request):
-    paints = Paint.objects.filter(
-        name="Ferropox", location="Yalova", weight="20 KG")
-    paints2 = Paint.objects.filter(
-        name="Ferropox", location="Yalova", weight="5 KG")
+def big_paints(request):
+    paints = Paint.objects.filter(location="Yalova", weight="20 KG")
     context = {
         'paints': paints,
-        'paints2': paints2,
     }
-    return render(request, 'pages/ferropox-yalova.html', context)
+    return render(request, 'pages/buyuk-boyalar.html', context)
 
 
 def alkid_yalova(request):
