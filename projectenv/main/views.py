@@ -19,40 +19,20 @@ def index(request):
     return render(request, 'pages/index.html', context,)
 
 
-def ferropox(request):
-    paints = Paint.objects.filter(
-        name="Ferropox", location="İstanbul", weight="20 KG")
-    paints2 = Paint.objects.filter(
-        name="Ferropox", location="İstanbul", weight="5 KG")
+def big_paints_istanbul(request):
+    paints = Paint.objects.filter(location="İstanbul", weight="20 KG")
     context = {
         'paints': paints,
-        'paints2': paints2,
     }
-    return render(request, 'pages/ferropox.html', context)
+    return render(request, 'pages/buyuk-boyalar-istanbul.html', context)
 
 
-def alkid(request):
-    paints = Paint.objects.filter(
-        name="Alkid", location="İstanbul", weight="20 KG")
-    paints2 = Paint.objects.filter(
-        name="Alkid", location="İstanbul", weight="5 KG")
+def small_paints_istanbul(request):
+    paints = Paint.objects.filter(location="İstanbul", weight="5 KG")
     context = {
         'paints': paints,
-        'paints2': paints2,
     }
-    return render(request, 'pages/alkid.html', context)
-
-
-def promega(request):
-    paints = Paint.objects.filter(
-        name="Promega", location="İstanbul", weight="20 KG")
-    paints2 = Paint.objects.filter(
-        name="Promega", location="İstanbul", weight="5 KG")
-    context = {
-        'paints': paints,
-        'paints2': paints2,
-    }
-    return render(request, 'pages/promega.html', context)
+    return render(request, 'pages/kucuk-boyalar-istanbul.html', context)
 
 
 def big_paints_yalova(request):
@@ -60,7 +40,7 @@ def big_paints_yalova(request):
     context = {
         'paints': paints,
     }
-    return render(request, 'pages/buyuk-boyalar.html', context)
+    return render(request, 'pages/buyuk-boyalar-yalova.html', context)
 
 
 def small_paints_yalova(request):

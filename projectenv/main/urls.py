@@ -9,14 +9,14 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('ferropox', views.ferropox, name='ferropox'),
-    path('alkid', views.alkid, name='alkid'),
-    path('promega', views.promega, name='promega'),
+    path('buyuk-boyalar-istanbul', views.big_paints_istanbul,
+         name='buyuk-boyalar-istanbul'),
+    path('kucuk-boyalar-istanbul', views.small_paints_istanbul,
+         name='kucuk-boyalar-istanbul'),
     path('buyuk-boyalar-yalova', views.big_paints_yalova,
          name='buyuk-boyalar-yalova'),
     path('kucuk-boyalar-yalova', views.small_paints_yalova,
          name='kucuk-boyalar-yalova'),
-    path('promega-yalova', views.promega_yalova, name='promega_yalova'),
     path('edit/<int:id>', views.editPaint),
     path('update/<int:id>', views.updatePaint),
     path('boya-ekle', views.addPaint, name="boya_ekle"),
