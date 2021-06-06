@@ -17,7 +17,7 @@ urlpatterns = [
     path('alkid-yalova', views.alkid_yalova, name='alkid_yalova'),
     path('edit/<int:id>', views.editPaint),
     path('update/<int:id>', views.updatePaint),
-    path('boya-ekle', views.addPaint, name="boya-ekle"),
+    path('boya-ekle', views.addPaint, name="boya_ekle"),
     path('login/', auth_views.LoginView.as_view(template_name='accounts/login.html'), name="loginView"),
     path('logout/', auth_views.LogoutView.as_view(template_name='accounts/logout.html'),
          name='logoutView'),
