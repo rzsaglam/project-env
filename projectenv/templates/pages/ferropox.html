@@ -5,7 +5,6 @@
     <thead>
       <tr>
         <th scope="col">BOYA</th>
-        <th scope="col">TÜR</th>
         <th scope="col">RENK</th>
         <th scope="col">KG</th>
         <th scope="col">STOK</th>
@@ -14,8 +13,7 @@
     {% for paint in paints %}
     <tbody>
       <tr>
-        <td>{{ paint.name }}</td>
-        <td>{{ paint.type }}</td>
+        <td>{{ paint.name }} {{ paint.type }}</td>
         <td>{{ paint.color }}</td>
         <td>{{ paint.weight }}</td>
         <td>
@@ -34,8 +32,7 @@
     {% for paint2 in paints2 %}
     <tbody>
       <tr>
-        <td>{{ paint2.name }}</td>
-        <td>{{ paint2.type }}</td>
+        <td>{{ paint2.name }} {{ paint2.type }}</td>
         <td>{{ paint2.color }}</td>
         <td>{{ paint2.weight }}</td>
         <td>
