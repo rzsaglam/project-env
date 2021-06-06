@@ -7,6 +7,7 @@
         <th scope="col">BOYA</th>
         <th scope="col">TÜR</th>
         <th scope="col">RENK</th>
+        <th scope="col">KG</th>
         <th scope="col">STOK</th>
       </tr>
     </thead>
@@ -16,12 +17,33 @@
         <td>{{ paint.name }}</td>
         <td>{{ paint.type }}</td>
         <td>{{ paint.color }}</td>
+        <td>{{ paint.weight }}</td>
         <td>
         <input name="currentStock" type="number" class="{% if paint.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ paint.stock }}" readonly>
         </td>
         {% if user.is_authenticated %}
         <td>
           <a href="/edit/{{paint.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for paint2 in paints2 %}
+    <tbody>
+      <tr>
+        <td>{{ paint2.name }}</td>
+        <td>{{ paint2.type }}</td>
+        <td>{{ paint2.color }}</td>
+        <td>{{ paint2.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if paint2.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if paint2.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ paint2.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{paint2.id}}">
             <input type="submit" class="btn btn-sm btn-success" value="Giriş">
           </a>
         </td>

@@ -20,49 +20,73 @@ def index(request):
 
 
 def ferropox(request):
-    paints = Paint.objects.filter(name="Ferropox")
+    paints = Paint.objects.filter(
+        name="Ferropox", location="İstanbul", weight="20 KG")
+    paints2 = Paint.objects.filter(
+        name="Ferropox", location="İstanbul", weight="5 KG")
     context = {
         'paints': paints,
+        'paints2': paints2,
     }
     return render(request, 'pages/ferropox.html', context)
 
 
 def alkid(request):
-    paints = Paint.objects.filter(name="Alkid")
+    paints = Paint.objects.filter(
+        name="Alkid", location="İstanbul", weight="20 KG")
+    paints2 = Paint.objects.filter(
+        name="Alkid", location="İstanbul", weight="5 KG")
     context = {
         'paints': paints,
+        'paints2': paints2,
     }
     return render(request, 'pages/alkid.html', context)
 
 
 def promega(request):
-    paints = Paint.objects.filter(name="Promega")
+    paints = Paint.objects.filter(
+        name="Promega", location="İstanbul", weight="20 KG")
+    paints2 = Paint.objects.filter(
+        name="Promega", location="İstanbul", weight="5 KG")
     context = {
-        'paints': paints
+        'paints': paints,
+        'paints2': paints2,
     }
     return render(request, 'pages/promega.html', context)
 
 
 def ferropox_yalova(request):
-    paints = Paint.objects.filter(name="Ferropox", location="Yalova")
+    paints = Paint.objects.filter(
+        name="Ferropox", location="Yalova", weight="20 KG")
+    paints2 = Paint.objects.filter(
+        name="Ferropox", location="Yalova", weight="5 KG")
     context = {
         'paints': paints,
+        'paints2': paints2,
     }
     return render(request, 'pages/ferropox-yalova.html', context)
 
 
 def alkid_yalova(request):
-    paints = Paint.objects.filter(name="Alkid", location="Yalova")
+    paints = Paint.objects.filter(
+        name="Alkid", location="Yalova", weight="20 KG")
+    paints2 = Paint.objects.filter(
+        name="Alkid", location="Yalova", weight="5 KG")
     context = {
         'paints': paints,
+        'paints2': paints2,
     }
     return render(request, 'pages/alkid-yalova.html', context)
 
 
 def promega_yalova(request):
-    paints = Paint.objects.filter(name="Promega", location="Yalova")
+    paints = Paint.objects.filter(
+        name="Promega", location="Yalova", weight="20 KG")
+    paints2 = Paint.objects.filter(
+        name="Promega", location="Yalova", weight="5 KG")
     context = {
         'paints': paints,
+        'paints2': paints2,
     }
     return render(request, 'pages/promega-yalova.html', context)
 
