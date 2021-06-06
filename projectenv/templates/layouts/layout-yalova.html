@@ -42,19 +42,19 @@
     <div class="container-fluid">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link border-end" href="{% url 'ferropox_yalova' %}">Ferropox</a>
+            <a class="nav-link border-end" href="{% url 'alkid_yalova' %}">Alkid</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link border-end" href="{% url 'alkid_yalova' %}">Alkid</a>
+            <a class="nav-link border-end" href="{% url 'ferropox_yalova' %}">Ferropox</a>
           </li>
           <li class="nav-item">
             <a class="nav-link border-end" href="{% url 'promega_yalova' %}">Promega</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link border-end" href="{% url 'promega_yalova' %}">Epoxy</a>
+            <a class="nav-link border-end" href="">Epoxy</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'promega_yalova' %}">Akrilik</a>
+            <a class="nav-link" href="">Akrilik</a>
           </li>
         </ul>
     </div>
@@ -63,32 +63,24 @@
     <div class="container-fluid">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'ferropox_yalova' %}">Ferropox</a>
+            <a class="nav-link border-end" href="">Sülyen</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'alkid_yalova' %}">Alkid</a>
+            <a class="nav-link border-end" href="">Promarin</a>
           </li>
           <li class="nav-item">
-            <a class="nav-item nav-item nav-link" href="{% url 'promega_yalova' %}">Promega</a>
+            <a class="nav-link border-end" href="">Under Water</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link border-end" href="">Ferforje</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link border" href="">Antipas</a>
           </li>
         </ul>
     </div>
   </nav>
-  <nav class="navbar navbar-expand navbar-light bg-light py-1">
-    <div class="container-fluid">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'ferropox_yalova' %}">Ferropox</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'alkid_yalova' %}">Alkid</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-item nav-item nav-link" href="{% url 'promega_yalova' %}">Promega</a>
-          </li>
-        </ul>
-    </div>
-  </nav>
+  
   {% block content %}
   {% endblock %}
 </body>
