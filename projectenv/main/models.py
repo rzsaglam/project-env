@@ -8,14 +8,7 @@ class Paint(models.Model):
     type = models.CharField(max_length=200, default="none")
     color = models.CharField(max_length=200)
     stock = models.IntegerField(default=0)
-    KG20 = "20 KG"
-    KG5 = "5 KG"
-    WEIGHTCHOISES = [
-        (KG20, "20 KG"),
-        (KG5, "5 KG"),
-    ]
-    weight = models.CharField(
-        max_length=200, choices=WEIGHTCHOISES, default=KG20)
+    weight = models.CharField(max_length=200)
     IST = "İstanbul"
     YLV = "Yalova"
     LOCATIONCHOISES = [
