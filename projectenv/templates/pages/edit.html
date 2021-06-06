@@ -33,9 +33,13 @@
         <td>BOYA STOK</td>
         <td><input type="text" class="input-group-text" name="stock" value="{{paint.stock}}"></td>
       </tr>
+      <tr>
+        <td>BOYA LOKASYON</td>
+        <td><input type="text" class="input-group-text" name="location" value="{{paint.location}}"></td>
+      </tr>
     </table>
     <input type="submit" class="btn btn-success" value="Güncelle">
-    <a class="btn btn-secondary" href="/index">Çıkış</a>
+    <a class="btn btn-secondary" href="{% url 'index' %}">Çıkış</a>
     {% if messages %}
     {% for updatePaint in messages %}
     {{updatePaint}}

@@ -1,0 +1,33 @@
+{% extends 'layouts/layout-yalova.html'%}
+{% block content %}
+
+  <center>
+    <form method="POST">
+      {% csrf_token %}
+    <table class="table">
+      <tr>
+        <td>BOYA AD</td>
+        <td><input type="text" class="input-group-text" name="name" value="{{paint.name}}"></td>
+      </tr>
+      <tr>
+        <td>BOYA TÜR</td>
+        <td><input type="text" class="input-group-text" name="type" value="{{paint.type}}"></td>
+      </tr>
+      <tr>
+        <td>BOYA RENK</td>
+        <td><input type="text" class="input-group-text" name="color" value="{{paint.color}}"></td>
+      </tr>
+      <tr>
+        <td>BOYA STOK</td>
+        <td><input type="text" class="input-group-text" name="stock" value="{{paint.stock}}"></td>
+      </tr>
+      <tr>
+        <td>BOYA LOKASYON</td>
+        <td><input type="text" class="input-group-text" name="location" value="{{paint.location}}"></td>
+      </tr>
+    </table>
+    <input type="submit" class="btn btn-success" value="Ekle">
+    <a class="btn btn-secondary" href="{% url 'index' %}">Çıkış</a>
+  </form>
+  </center>
+{% endblock%}

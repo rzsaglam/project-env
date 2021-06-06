@@ -5,7 +5,7 @@ from django.shortcuts import redirect, render
 from django.http import request
 from django.urls import reverse
 from .models import Paint
-from .forms import StockForm, NewUserForm, LoginForm
+from .forms import PaintForm, StockForm, NewUserForm, LoginForm
 from django.contrib import messages
 from django.contrib.auth import login, authenticate, logout
 # Create your views here.
@@ -20,7 +20,7 @@ def index(request):
 
 
 def ferropox(request):
-    paints = Paint.objects.filter(name="Ferropox", location="İstanbul")
+    paints = Paint.objects.filter(name="Ferropox")
     context = {
         'paints': paints,
     }
@@ -28,7 +28,7 @@ def ferropox(request):
 
 
 def alkid(request):
-    paints = Paint.objects.filter(name="Alkid", location="İstanbul")
+    paints = Paint.objects.filter(name="Alkid")
     context = {
         'paints': paints,
     }
@@ -36,19 +36,19 @@ def alkid(request):
 
 
 def promega(request):
-    paints = Paint.objects.filter(name="Promega", location="İstanbul")
+    paints = Paint.objects.filter(name="Promega")
     context = {
         'paints': paints
     }
     return render(request, 'pages/promega.html', context)
 
 
-def promega_yalova(request):
-    paints = Paint.objects.filter(name="Promega", location="Yalova")
+def ferropox_yalova(request):
+    paints = Paint.objects.filter(name="Ferropox", location="Yalova")
     context = {
         'paints': paints,
     }
-    return render(request, 'pages/promega-yalova.html', context)
+    return render(request, 'pages/ferropox-yalova.html', context)
 
 
 def alkid_yalova(request):
@@ -59,12 +59,20 @@ def alkid_yalova(request):
     return render(request, 'pages/alkid-yalova.html', context)
 
 
-def ferropox_yalova(request):
-    paints = Paint.objects.filter(name="Ferropox", location="Yalova")
+def promega_yalova(request):
+    paints = Paint.objects.filter(name="Promega", location="Yalova")
     context = {
         'paints': paints,
     }
-    return render(request, 'pages/ferropox-yalova.html', context)
+    return render(request, 'pages/promega-yalova.html', context)
+
+
+def addPaint(request):
+    paintForm = PaintForm(request.POST)
+    if paintForm.is_valid():
+        paintForm.save()
+        messages.success(request, "Başarıyla Eklendi.")
+    return render(request, 'pages/boya-ekle.html', {"paintForm": paintForm})
 
 
 def editPaint(request, id):

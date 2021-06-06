@@ -31,5 +31,12 @@
     {% endfor %}
   </table>
   </div>
+  {% if user.is_authenticated %}
+        <center>
+          <a href="{% url 'boya-ekle' %}">
+            <input type="submit" class="btn btn-sm btn-success" value="Boya Ekle">
+          </a>
+        </center>
+  {% endif %}
 {% endblock%}
 
