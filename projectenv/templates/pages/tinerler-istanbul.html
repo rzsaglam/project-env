@@ -1,0 +1,292 @@
+{% extends 'layouts/layout.html'%}
+{% block content %}
+  <div>
+  <table class="table table-light table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">TİNER</th>
+        <th scope="col">KG</th>
+        <th scope="col">STOK</th>
+      </tr>
+    </thead>
+    {% for tiner in epoxy20 %}
+    <tbody>
+      <tr>
+        <td>{{ tiner.name }} {{ tiner.type }}</td>
+        <td>{{ tiner.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if tiner.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if tiner.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ tiner.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{tiner.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for tiner in epoxy12 %}
+    <tbody>
+      <tr>
+        <td>{{ tiner.name }} {{ tiner.type }}</td>
+        <td>{{ tiner.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if tiner.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if tiner.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ tiner.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{tiner.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for tiner in epoxy5 %}
+    <tbody>
+      <tr>
+        <td>{{ tiner.name }} {{ tiner.type }}</td>
+        <td>{{ tiner.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if tiner.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if tiner.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ tiner.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{tiner.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for tiner in polyurethane20 %}
+    <tbody>
+      <tr>
+        <td>{{ tiner.name }} {{ tiner.type }}</td>
+        <td>{{ tiner.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if tiner.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if tiner.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ tiner.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{tiner.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for tiner in polyurethane12 %}
+    <tbody>
+      <tr>
+        <td>{{ tiner.name }} {{ tiner.type }}</td>
+        <td>{{ tiner.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if tiner.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if tiner.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ tiner.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{tiner.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for tiner in polyurethane5 %}
+    <tbody>
+      <tr>
+        <td>{{ tiner.name }} {{ tiner.type }}</td>
+        <td>{{ tiner.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if tiner.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if tiner.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ tiner.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{tiner.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for tiner in zehirli20 %}
+    <tbody>
+      <tr>
+        <td>{{ tiner.name }} {{ tiner.type }}</td>
+        <td>{{ tiner.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if tiner.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if tiner.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ tiner.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{tiner.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for tiner in zehirli12 %}
+    <tbody>
+      <tr>
+        <td>{{ tiner.name }} {{ tiner.type }}</td>
+        <td>{{ tiner.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if tiner.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if tiner.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ tiner.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{tiner.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for tiner in zehirli5 %}
+    <tbody>
+      <tr>
+        <td>{{ tiner.name }} {{ tiner.type }}</td>
+        <td>{{ tiner.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if tiner.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if tiner.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ tiner.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{tiner.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for tiner in sentetik20 %}
+    <tbody>
+      <tr>
+        <td>{{ tiner.name }} {{ tiner.type }}</td>
+        <td>{{ tiner.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if tiner.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if tiner.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ tiner.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{tiner.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for tiner in sentetik12 %}
+    <tbody>
+      <tr>
+        <td>{{ tiner.name }} {{ tiner.type }}</td>
+        <td>{{ tiner.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if tiner.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if tiner.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ tiner.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{tiner.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for tiner in sentetik5 %}
+    <tbody>
+      <tr>
+        <td>{{ tiner.name }} {{ tiner.type }}</td>
+        <td>{{ tiner.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if tiner.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if tiner.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ tiner.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{tiner.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for tiner in selulozik20 %}
+    <tbody>
+      <tr>
+        <td>{{ tiner.name }} {{ tiner.type }}</td>
+        <td>{{ tiner.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if tiner.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if tiner.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ tiner.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{tiner.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for tiner in selulozik12 %}
+    <tbody>
+      <tr>
+        <td>{{ tiner.name }} {{ tiner.type }}</td>
+        <td>{{ tiner.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if tiner.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if tiner.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ tiner.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{tiner.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for tiner in selulozik5 %}
+    <tbody>
+      <tr>
+        <td>{{ tiner.name }} {{ tiner.type }}</td>
+        <td>{{ tiner.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if tiner.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if tiner.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ tiner.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{tiner.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+  </div>
+  {% if user.is_authenticated %}
+        <center>
+          <a href="{% url 'boya_ekle' %}">
+            <input type="submit" class="btn btn-sm btn-success" value="Tiner Ekle">
+          </a>
+        </center>
+  {% endif %}
+{% endblock%}
+

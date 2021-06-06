@@ -19,7 +19,13 @@
       </tr>
       <tr>
         <td>AĞIRLIK</td>
-        <td><input type="text" class="input-group-text" name="weight" value="{{paint.weight}}"></td>
+        <td>
+        <select class="form-select" name="weight" style="max-width:200px;">
+          <option value="20 KG">20 KG</option>
+          <option value="12 KG">12 KG</option>
+          <option value="5 KG">5 KG</option>
+        </select>
+        </td>
       </tr>
       <tr>
         <td>STOK</td>
@@ -32,7 +38,15 @@
           <option value="İstanbul">İstanbul</option>
           <option value="Yalova">Yalova</option>
         </select>
-        <!-- <input type="text" class="input-group-text" name="location" value="{{paint.location}}"> -->
+        </td>
+      </tr>
+      <tr>
+        <td>SEÇ</td>
+        <td>
+        <select class="form-select" name="choice" style="max-width:200px;">
+          <option value="Boya">Boya</option>
+          <option value="Tiner">Tiner</option>
+        </select>
         </td>
       </tr>
     </table>
