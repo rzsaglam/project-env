@@ -55,7 +55,7 @@ def promega(request):
     return render(request, 'pages/promega.html', context)
 
 
-def big_paints(request):
+def big_paints_yalova(request):
     paints = Paint.objects.filter(location="Yalova", weight="20 KG")
     context = {
         'paints': paints,
@@ -63,16 +63,12 @@ def big_paints(request):
     return render(request, 'pages/buyuk-boyalar.html', context)
 
 
-def alkid_yalova(request):
-    paints = Paint.objects.filter(
-        name="Alkid", location="Yalova", weight="20 KG")
-    paints2 = Paint.objects.filter(
-        name="Alkid", location="Yalova", weight="5 KG")
+def small_paints_yalova(request):
+    paints = Paint.objects.filter(location="Yalova", weight="5 KG")
     context = {
         'paints': paints,
-        'paints2': paints2,
     }
-    return render(request, 'pages/alkid-yalova.html', context)
+    return render(request, 'pages/kucuk-boyalar-yalova.html', context)
 
 
 def promega_yalova(request):

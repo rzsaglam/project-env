@@ -29,25 +29,6 @@
       </tr>
     </tbody>
     {% endfor %}
-    {% for paint2 in paints2 %}
-    <tbody>
-      <tr>
-        <td>{{ paint2.name }} {{ paint2.type }}</td>
-        <td>{{ paint2.color }}</td>
-        <td>{{ paint2.weight }}</td>
-        <td>
-        <input name="currentStock" type="number" class="{% if paint2.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if paint2.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ paint2.stock }}" readonly>
-        </td>
-        {% if user.is_authenticated %}
-        <td>
-          <a href="/edit/{{paint2.id}}">
-            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
-          </a>
-        </td>
-        {% endif %}
-      </tr>
-    </tbody>
-    {% endfor %}
   </table>
   </div>
   {% if user.is_authenticated %}
