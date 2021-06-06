@@ -67,6 +67,177 @@
       </tr>
     </tbody>
     {% endfor %}
+    {% for paint in ferromel %}
+    <tbody>
+      <tr>
+        <td>{{ paint.name }} {{ paint.type }}</td>
+        <td>{{ paint.color }}</td>
+        <td>{{ paint.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if paint.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ paint.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{paint.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for paint in epoxy %}
+    <tbody>
+      <tr>
+        <td>{{ paint.name }} {{ paint.type }}</td>
+        <td>{{ paint.color }}</td>
+        <td>{{ paint.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if paint.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ paint.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{paint.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for paint in akrilik %}
+    <tbody>
+      <tr>
+        <td>{{ paint.name }} {{ paint.type }}</td>
+        <td>{{ paint.color }}</td>
+        <td>{{ paint.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if paint.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ paint.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{paint.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for paint in promarin %}
+    <tbody>
+      <tr>
+        <td>{{ paint.name }} {{ paint.type }}</td>
+        <td>{{ paint.color }}</td>
+        <td>{{ paint.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if paint.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ paint.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{paint.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for paint in underwater %}
+    <tbody>
+      <tr>
+        <td>{{ paint.name }} {{ paint.type }}</td>
+        <td>{{ paint.color }}</td>
+        <td>{{ paint.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if paint.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ paint.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{paint.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for paint in ferforje %}
+    <tbody>
+      <tr>
+        <td>{{ paint.name }} {{ paint.type }}</td>
+        <td>{{ paint.color }}</td>
+        <td>{{ paint.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if paint.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ paint.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{paint.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for paint in antipas %}
+    <tbody>
+      <tr>
+        <td>{{ paint.name }} {{ paint.type }}</td>
+        <td>{{ paint.color }}</td>
+        <td>{{ paint.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if paint.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ paint.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{paint.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for paint in aluminyum %}
+    <tbody>
+      <tr>
+        <td>{{ paint.name }} {{ paint.type }}</td>
+        <td>{{ paint.color }}</td>
+        <td>{{ paint.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if paint.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ paint.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{paint.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
+    {% for paint in resistant %}
+    <tbody>
+      <tr>
+        <td>{{ paint.name }} {{ paint.type }}</td>
+        <td>{{ paint.color }}</td>
+        <td>{{ paint.weight }}</td>
+        <td>
+        <input name="currentStock" type="number" class="{% if paint.stock == 0 %}input-group-text input-group-sm text-light bg-danger{% endif %}{% if paint.stock != 0 %}input-group-text input-group-sm{% endif %}" style="max-width:60px;" value="{{ paint.stock }}" readonly>
+        </td>
+        {% if user.is_authenticated %}
+        <td>
+          <a href="/edit/{{paint.id}}">
+            <input type="submit" class="btn btn-sm btn-success" value="Giriş">
+          </a>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+    {% endfor %}
   </table>
   </div>
   {% if user.is_authenticated %}
