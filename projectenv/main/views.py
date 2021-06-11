@@ -306,6 +306,8 @@ def updatePaint(request, id):
         form.save()
         messages.success(request, "Başarıyla Güncellendi.")
         return render(request, "pages/edit.html", {"paint": paint})
+    else:
+        return render(request, "pages/index.html", {"paint": paint})
 
 
 def loginView(request):
