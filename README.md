@@ -1,7 +1,7 @@
 # Project Env
 Project-Env is a personal stock managment project for develop skills.
 
-![Image](https://i.imgur.com/SMuOJGP.png)
+![Image](https://imgur.com/a/InKrj4Q)
 
 # Installation
 ```
